@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCk3il-_3BMGgytGvprLmaZzpXNMGDG4EA",
-    authDomain: "remake-yourself.firebaseapp.com",
-    projectId: "remake-yourself",
-    storageBucket: "remake-yourself.appspot.com",
-    messagingSenderId: "760289402757",
-    appId: "1:760289402757:web:74985a817a61ceba0ceeec"
+    apiKey: "AIzaSyBK3ecA9pcjCyiiwiiikOziKoH7Chep8bY",
+    authDomain: "silvan-fitness-care.firebaseapp.com",
+    projectId: "silvan-fitness-care",
+    storageBucket: "silvan-fitness-care.appspot.com",
+    messagingSenderId: "663107143339",
+    appId: "1:663107143339:web:ea7bb66638cb67ef9d99ee"
 };
 
 // Initialize Firebase

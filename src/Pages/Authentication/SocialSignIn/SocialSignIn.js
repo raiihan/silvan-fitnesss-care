@@ -5,7 +5,6 @@ import auth from '../../../Firebase/Firebase.init';
 
 const SocialSignIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    console.log(user);
     return (
         <div>
 
