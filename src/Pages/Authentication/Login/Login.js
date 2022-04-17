@@ -6,7 +6,6 @@ import auth from '../../../Firebase/Firebase.init';
 import Loading from '../../SharedPages/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
 import toast, { Toaster } from 'react-hot-toast';
-import './Login.css';
 
 const Login = () => {
 
@@ -72,8 +71,8 @@ const Login = () => {
             toast.error('Please Input Your Email First');
         }
         else {
+            console.log(userInfo.email)
             await sendPasswordResetEmail(userInfo.email)
-            // toast('Your Password Reset email Sent. Please Check your Email');
             toast.success('Your Password Reset email Sent. Please Check your Email.');
         }
     }

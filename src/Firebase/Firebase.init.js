@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBK3ecA9pcjCyiiwiiikOziKoH7Chep8bY",
-    authDomain: "silvan-fitness-care.firebaseapp.com",
-    projectId: "silvan-fitness-care",
-    storageBucket: "silvan-fitness-care.appspot.com",
-    messagingSenderId: "663107143339",
-    appId: "1:663107143339:web:ea7bb66638cb67ef9d99ee"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

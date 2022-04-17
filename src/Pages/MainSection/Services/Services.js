@@ -11,7 +11,6 @@ const Services = () => {
     }, [])
     return (
         <div className='container'>
-            {services.length}
             <h3 className='text-center my-3'>My Provided Services</h3>
             <Row xs={1} md={2} lg={3} className="g-4">
                 {

@@ -1,20 +1,10 @@
 import React from 'react';
-import './Banner.css';
 import banner from '../../../Assets/Banner/banner1.jpg';
 import banner3 from '../../../Assets/Banner/banner3.jpg';
 import banner2 from '../../../Assets/Banner/banner2.jpg';
 import { Carousel } from 'react-bootstrap';
 
-const styles = {
-    container: {
-        backgroundImage: `url(${banner})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        width: '100vw',
-        height: '650px'
-    }
-};
+
 
 const Banner = () => {
     return (
@@ -52,9 +42,6 @@ const Banner = () => {
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-        // <div style={styles.container}>
-
-        // </div>
     );
 };
 
