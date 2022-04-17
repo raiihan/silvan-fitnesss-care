@@ -2,7 +2,7 @@
     {
         "id": 1,
         "price": "$123.31",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
+        "picture": "https://i.ibb.co/KqrV8dr/cardio.jpg",
         "name": "CARDIO TRAINING",
         "title": "Lose that belly fat now",
         "packageTime": "One Week",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "price": "$320.31",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
+        "picture": "https://i.ibb.co/KqrV8dr/cardio.jpg",
         "name": "CARDIO TRAINING",
         "title": "Lose that belly fat now",
         "packageTime": "Four Weeks",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "price": "$245.72",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
+        "picture": "https://i.ibb.co/JyTNXXW/Crossfit.jpg",
         "name": "CROSSFIT TRAINING",
         "title": "high intensity workouts with your friends",
         "packageTime": "Three weeks",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "price": "$92.64",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
+        "picture": "https://i.ibb.co/h7Ytnr8/strength.jpg",
         "name": "STRENGTH TRAINING",
         "title": "gain muscle",
         "packageTime": "",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "price": "$500.00",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
+        "picture": "https://i.ibb.co/4JLR0zS/weight.jpg",
         "name": "WEIGHT LOSS",
         "title": "Lose excess fat",
         "packageTime": "Six Months",

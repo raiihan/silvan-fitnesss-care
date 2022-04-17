@@ -10,7 +10,7 @@ const Header = () => {
     const [user, loading, error] = useAuthState(auth);
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky="top">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img src={logo} height="50" alt="logo" />
