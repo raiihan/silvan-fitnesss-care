@@ -3,56 +3,45 @@
         "id": 1,
         "price": "$123.31",
         "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Good Hawkins",
-        "packageTime": " Knowles",
-        "about": "Magna duis ex non dolor. Eu esse culpa veniam occaecat dolore. Elit voluptate culpa amet minim incididunt. Ut sint nostrud amet consectetur qui. Magna do sunt ea commodo officia minim voluptate labore ut et dolore velit ipsum. Proident ad consequat cillum enim excepteur adipisicing cillum quis.\r\n"
+        "name": "CARDIO TRAINING",
+        "title": "Lose that belly fat now",
+        "packageTime": "One Week",
+        "body": "Work on your abs and core with state-of-the-art equipments specially brought to you by the best gym in Patna, Mutants.\r\n"
     },
     {
         "id": 2,
-        "price": "$129.54",
+        "price": "$320.31",
         "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Dawson Molina",
-        "packageTime": " Wright",
-        "about": "Qui ipsum cupidatat proident eu cillum ullamco. Commodo ut est excepteur eu cillum duis sint laboris amet veniam excepteur commodo. Pariatur excepteur consequat reprehenderit commodo minim sunt eiusmod labore. Nulla pariatur ut consectetur magna voluptate anim excepteur aliquip ad non exercitation dolore. Consequat enim pariatur consectetur consequat deserunt ad laborum laborum quis ut eu Lorem occaecat.\r\n"
+        "name": "CARDIO TRAINING",
+        "title": "Lose that belly fat now",
+        "packageTime": "Four Weeks",
+        "body": "Work on your abs and core with state-of-the-art equipments specially brought to you by the best gym in Patna, Mutants.\r\n"
     },
     {
         "id": 3,
-        "price": "$45.72",
+        "price": "$245.72",
         "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Baird Rodgers",
-        "packageTime": " Reed",
-        "about": "Dolor enim anim eiusmod ad dolor labore in pariatur aute ipsum minim nulla est occaecat. Consectetur labore nisi sit reprehenderit ea mollit in fugiat nisi do Lorem commodo reprehenderit in. Consequat sint in laborum nulla dolor culpa laborum ut ullamco quis. Qui ut minim sunt eu non est culpa ad cillum. Nostrud pariatur proident ea Lorem est veniam deserunt sunt do adipisicing adipisicing sit. In veniam duis ad Lorem consequat occaecat non et.\r\n"
+        "name": "CROSSFIT TRAINING",
+        "title": "high intensity workouts with your friends",
+        "packageTime": "Three weeks",
+        "body": "Train with the best of the best in an intense workout session under the expert guidance of our personal trainers only at Mutants Gym..\r\n"
     },
     {
         "id": 4,
-        "price": "$192.64",
+        "price": "$92.64",
         "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Eileen Gates",
-        "packageTime": " Stevenson",
-        "about": "Do pariatur incididunt dolore eiusmod officia exercitation duis. Esse cupidatat aliqua ullamco consectetur commodo esse sint. Labore est incididunt ea reprehenderit voluptate veniam amet ipsum non non. Eu do tempor magna amet eu magna eiusmod. Ea dolore aliquip amet nisi est consequat tempor eiusmod eu sunt velit fugiat.\r\n"
+        "name": "STRENGTH TRAINING",
+        "title": "gain muscle",
+        "packageTime": "",
+        "body": "Build your strength and get those extra few pounds in before the swimsuit season. Come train under expert personal trainers only at Mutants Gym.\r\n"
     },
     {
         "id": 5,
-        "price": "$119.71",
+        "price": "$500.00",
         "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Brittney Odonnell",
-        "packageTime": " Lee",
-        "about": "Excepteur elit id ad sint culpa magna aliqua et aliqua. Fugiat nostrud deserunt commodo quis commodo nisi sit ut sint minim. Excepteur ipsum ullamco qui exercitation. Nostrud ut reprehenderit non sit.\r\n"
-    },
-    {
-        "id": 6,
-        "price": "$56.01",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Vaughn Maynard",
-        "packageTime": " Rosales",
-        "about": "Ut ut ullamco nisi eiusmod nostrud minim sunt duis occaecat cillum mollit voluptate. Eu exercitation est anim officia minim sunt qui Lorem esse sint. Est amet enim nulla sit dolore nisi nisi exercitation anim adipisicing magna incididunt id. Cupidatat duis do velit ut.\r\n"
-    },
-    {
-        "id": 7,
-        "price": "$37.37",
-        "picture": "https://i.ibb.co/xYWLCMw/architecture-building-city-2047397.png",
-        "name": "Tabitha Bean",
-        "packageTime": " Beach",
-        "about": "Cillum aliquip sint Lorem mollit excepteur. Officia sunt ea qui mollit veniam culpa ea cillum tempor nulla ex. Aute amet aute et incididunt do commodo do. Ad in aliquip nulla commodo voluptate voluptate velit sit mollit velit. Dolor laborum dolore culpa enim consequat exercitation dolore. Laborum magna mollit ad laborum in.\r\n"
+        "name": "WEIGHT LOSS",
+        "title": "Lose excess fat",
+        "packageTime": "Six Months",
+        "body": "Lose extra weight and get in shape with expert personal trainers and top notch fitness equipments only at Mutants Gym, the best gym in Patna.\r\n"
     }
 ]
