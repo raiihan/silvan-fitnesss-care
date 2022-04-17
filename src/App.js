@@ -8,6 +8,8 @@ import SignUp from './Pages/Authentication/SignUp/SignUp';
 import Checkout from './Pages/MainSection/Checkout/Checkout';
 import RequireAuth from './Pages/Authentication/RequireAuth/RequireAuth';
 import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
+import Footer from './Pages/SharedPages/Footer/Footer';
 
 function App() {
   return (
@@ -18,10 +20,12 @@ function App() {
         <Route path='checkout/:serviceName' element={<RequireAuth>
           <Checkout />
         </RequireAuth>} />
+        <Route path='/blog' element={<Blog />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
