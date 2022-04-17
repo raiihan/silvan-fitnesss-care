@@ -50,7 +50,7 @@ const SignUp = () => {
             setCustomError({ ...customError, passwordError: "" })
         }
         else {
-            setCustomError({ ...customError, passwordError: "Password Minimum Characters" })
+            setCustomError({ ...customError, passwordError: "Password Minimum 7 Characters" })
             setUserInfo({ ...userInfo, password: '' });
         }
     }
@@ -96,7 +96,7 @@ const SignUp = () => {
                     break;
 
                 default:
-                    setCustomError({ ...customError, firebaseError: error?.message })
+                    setCustomError({ ...customError, firebaseError: error?.code })
                     break;
             }
         }

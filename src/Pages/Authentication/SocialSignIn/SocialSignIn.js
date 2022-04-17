@@ -14,6 +14,7 @@ const SocialSignIn = () => {
                 <div style={{ height: '1px' }} className='w-50 border'></div>
 
             </div>
+            {error && <p className='text-danger fw-bold text-center'>{error?.code}</p>}
             <div className='w-50 mx-auto'>
                 <Button
                     onClick={() => signInWithGoogle()}
