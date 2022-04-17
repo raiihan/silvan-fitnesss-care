@@ -1,5 +1,4 @@
-import { async } from '@firebase/util';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
@@ -16,7 +15,8 @@ const SignUp = () => {
     const [customError, setCustomError] = useState({
         emailError: '',
         passwordError: '',
-        confirmPassError: ''
+        confirmPassError: '',
+        firebaseError: ''
     })
 
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ const SignUp = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-        error,
+        hookError,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -65,18 +65,46 @@ const SignUp = () => {
         }
     }
 
+    // if (loading || updating) {
+    //     return <p>Loding....</p>
+    // }
+
     if (user) {
         console.log(user);
+        navigate('/')
     }
     const handleFormRegister = async e => {
         e.preventDefault();
 
         await createUserWithEmailAndPassword(userInfo.email, userInfo.password)
         await updateProfile({ displayName: userInfo.name });
-        navigate('/')
 
     }
+
+    useEffect(() => {
+        const error = hookError || updateError
+        if (error) {
+            switch (error?.code) {
+                case "auth/email-already-in-use":
+                    setCustomError({ ...customError, emailError: "Email Already Exists" })
+                    break;
+                case "auth/email-already-exists":
+                    setCustomError({ ...customError, emailError: "Email Already Exists" })
+                    break;
+                case "auth/invalid-password":
+                    setCustomError({ ...customError, passwordError: "Invalid Password" })
+                    break;
+
+                default:
+                    setCustomError({ ...customError, firebaseError: error?.message })
+                    break;
+            }
+        }
+    }, [hookError, updateError])
+
+
     console.log(userInfo.email, userInfo.password);
+    console.log(hookError?.message)
     return (
         <div className='container my-5'>
             <div className="border w-50 mx-auto p-4 rounded shadow">
@@ -122,6 +150,7 @@ const SignUp = () => {
                         />
                     </Form.Group>
                     {customError?.confirmPassError && <p className='text-danger fw-bold'>{customError?.confirmPassError}</p>}
+                    {customError?.firebaseError && <p className='text-danger fw-bold'>{customError?.firebaseError}</p>}
 
                     <div className="w-50 mx-auto">
                         <Button className='w-100' variant="primary" type="submit">
