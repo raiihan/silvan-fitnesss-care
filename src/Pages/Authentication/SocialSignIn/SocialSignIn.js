@@ -2,9 +2,13 @@ import { Button } from 'react-bootstrap';
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase/Firebase.init';
+import Loading from '../../SharedPages/Loading/Loading';
 
 const SocialSignIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    if (loading) {
+        return <Loading />
+    }
     return (
         <div>
 

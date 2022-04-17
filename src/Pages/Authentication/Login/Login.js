@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init';
+import Loading from '../../SharedPages/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
 import './Login.css';
 
@@ -55,6 +56,7 @@ const Login = () => {
         }
     }
 
+
     if (user) {
         navigate(from, { replace: true });
     }
@@ -80,6 +82,10 @@ const Login = () => {
             }
         }
     }, [error])
+
+    if (loading) {
+        return <Loading />
+    }
     return (
         <div className='container my-5'>
             <div className="border w-50 mx-auto p-4 rounded shadow">

@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init';
+import Loading from '../../SharedPages/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
 
 const SignUp = () => {
@@ -65,9 +66,6 @@ const SignUp = () => {
         }
     }
 
-    // if (loading || updating) {
-    //     return <p>Loding....</p>
-    // }
 
     if (user) {
         console.log(user);
@@ -101,6 +99,11 @@ const SignUp = () => {
             }
         }
     }, [hookError, updateError])
+
+
+    if (loading || updating) {
+        return <Loading />
+    }
 
 
     console.log(userInfo.email, userInfo.password);
