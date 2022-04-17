@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init';
 import Loading from '../../SharedPages/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
+import toast, { Toaster } from 'react-hot-toast';
 import './Login.css';
 
 const Login = () => {
@@ -25,6 +26,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, passReseterror] = useSendPasswordResetEmail(auth);
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -65,9 +67,20 @@ const Login = () => {
         signInWithEmailAndPassword(userInfo.email, userInfo.password);
     }
 
-    useEffect(() => {
+    const handlePasswordReset = async () => {
+        if (userInfo.email === '') {
+            toast.error('Please Input Your Email First');
+        }
+        else {
+            await sendPasswordResetEmail(userInfo.email)
+            // toast('Your Password Reset email Sent. Please Check your Email');
+            toast.success('Your Password Reset email Sent. Please Check your Email.');
+        }
+    }
 
-        if (error) {
+    useEffect(() => {
+        const firebaseError = error || passReseterror;
+        if (firebaseError) {
             switch (error?.code) {
                 case "auth/invalid-password":
                     setCustomError({ ...customError, passwordError: "Invalid Password" })
@@ -81,9 +94,9 @@ const Login = () => {
                     break;
             }
         }
-    }, [error])
+    }, [error, passReseterror])
 
-    if (loading) {
+    if (loading || sending) {
         return <Loading />
     }
     return (
@@ -116,14 +129,23 @@ const Login = () => {
                     </Form.Group>
                     {customError?.passwordError && <p className='text-danger fw-bold'>{customError?.passwordError}</p>}
                     {customError?.firebaseError && <p className='text-danger fw-bold'>{customError?.firebaseError}</p>}
-                    <h6 className='text-primary fw-bold  float-end'><Link to={'/login'} className="text-decoration-none">Forgot Password?</Link></h6>
-                    <div className="w-50 mx-auto">
+                    <h6 className='text-primary fw-bold  float-end '>
+                        <Link
+                            onClick={handlePasswordReset}
+                            to={'/login'}
+                            className="text-decoration-none"
+                        >
+                            Forgot Password?
+                        </Link>
+                    </h6>
+                    <div className="w-50 mx-auto mt-5">
                         <Button className='w-100' variant="primary" type="submit">
                             Login
                         </Button>
                     </div>
                 </Form>
                 <p className='text-center text-muted fs-5'>Don't have an account? <Link to={'/signup'} className="text-decoration-none">Register</Link></p>
+                <Toaster />
                 <SocialSignIn />
             </div>
         </div>

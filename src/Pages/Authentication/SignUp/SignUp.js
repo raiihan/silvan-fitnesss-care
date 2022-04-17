@@ -105,9 +105,6 @@ const SignUp = () => {
         return <Loading />
     }
 
-
-    console.log(userInfo.email, userInfo.password);
-    console.log(hookError?.message)
     return (
         <div className='container my-5'>
             <div className="border w-50 mx-auto p-4 rounded shadow">

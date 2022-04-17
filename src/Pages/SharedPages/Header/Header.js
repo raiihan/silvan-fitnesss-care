@@ -28,7 +28,8 @@ const Header = () => {
                             ?
                             <Nav.Link as={Link} to="/login"
                                 onClick={() => signOut(auth)}
-                            >Sign Out</Nav.Link>
+                            >Sign Out
+                            </Nav.Link>
                             :
                             <Nav.Link eventKey={2} as={Link} to="/login">
                                 Login
