@@ -5,6 +5,7 @@ import Login from './Pages/Authentication/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Pages/SharedPages/Header/Header';
 import SignUp from './Pages/Authentication/SignUp/SignUp';
+import Checkout from './Pages/MainSection/Checkout/Checkout';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='checkout/:serviceName' element={<Checkout />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>

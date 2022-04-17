@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Service = ({ service: { name, picture } }) => {
+    const navigate = useNavigate();
     return (
 
 
@@ -14,7 +16,9 @@ const Service = ({ service: { name, picture } }) => {
                         This is a longer card with supporting text below as a natural
                         lead-in to additional content. This content is a little bit longer.
                     </Card.Text>
-                    <Button variant="primary">Checkout</Button>
+                    <Button
+                        onClick={() => navigate(`/checkout/${name}`)}
+                        variant="primary">Checkout</Button>
                 </Card.Body>
             </Card>
         </Col>
