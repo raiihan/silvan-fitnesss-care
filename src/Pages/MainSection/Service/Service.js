@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import 'typeface-titillium-web';
 
+const styleAni = {
+    transform: 'scale(1.1)',
+    transition: 'all .6s',
+    overflow: 'hidden'
+}
+
 const Service = ({ service: { name, picture, price, title, packageTime, body } }) => {
+    const [animate, setAnimate] = useState({})
     const navigate = useNavigate();
+
+
+
+    const handleAnimation = () => {
+        setAnimate(styleAni)
+    }
+    const mouseOut = () => {
+        setAnimate({ transition: 'all .6s' })
+    }
     return (
 
 
         <Col>
+
             <Card
-                data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
+                onMouseOut={mouseOut}
+                onMouseOver={handleAnimation}
+                style={animate}
                 className='my-3'>
-                <Card.Img height={350} variant="top" src={picture} />
+                <Card.Img
+                    height={350}
+                    variant="top"
+                    src={picture} />
                 <Card.Body>
                     <Card.Title className='mb-0'>{name}</Card.Title>
                     <span>{title}</span>
