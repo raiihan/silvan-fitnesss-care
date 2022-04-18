@@ -9,7 +9,7 @@ const style = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     width: '100vw',
-    height: '480px'
+    height: '520px'
 }
 
 const BMICalculate = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init';
 import Loading from '../../SharedPages/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
@@ -20,7 +20,11 @@ const SignUp = () => {
         firebaseError: ''
     })
 
+    const location = useLocation();
     const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/";
+
+
     const [
         createUserWithEmailAndPassword,
         user,
@@ -68,8 +72,7 @@ const SignUp = () => {
 
 
     if (user) {
-        console.log(user);
-        navigate('/')
+        navigate(from, { replace: true });
     }
     const handleFormRegister = async e => {
         e.preventDefault();
