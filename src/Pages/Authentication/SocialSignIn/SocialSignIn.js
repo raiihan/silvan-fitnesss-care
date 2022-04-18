@@ -1,4 +1,5 @@
 import { Button } from 'react-bootstrap';
+import { FaFacebook, FaGoogle, FaTwitter, FaGithub } from 'react-icons/fa';
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase/Firebase.init';
@@ -19,13 +20,44 @@ const SocialSignIn = () => {
 
             </div>
             {error && <p className='text-danger fw-bold text-center'>{error?.code}</p>}
+            <div className='w-50 mx-auto my-2'>
+                <Button
+                    onClick={() => signInWithGoogle()}
+                    className='w-100 fw-bold'
+                    variant="outline-primary"
+                >
+                    <FaGoogle className='me-2' size={40} />
+                    Google
+                </Button>
+            </div>
+            <div className='w-50 mx-auto my-2'>
+                <Button
+                    onClick={() => signInWithGoogle()}
+                    className='w-100 fw-bold'
+                    variant="outline-primary"
+                >
+                    <FaFacebook className='me-2' size={40} />
+                    Facebook
+                </Button>
+            </div>
+            <div className='w-50 mx-auto my-2'>
+                <Button
+                    onClick={() => signInWithGoogle()}
+                    className='w-100 fw-bold'
+                    variant="outline-primary"
+                >
+                    <FaTwitter className='me-2' size={40} />
+                    Twitter
+                </Button>
+            </div>
             <div className='w-50 mx-auto'>
                 <Button
                     onClick={() => signInWithGoogle()}
-                    className='w-100'
+                    className='w-100 fw-bold'
                     variant="outline-primary"
                 >
-                    Google
+                    <FaGithub className='me-2' size={40} />
+                    Github
                 </Button>
             </div>
         </div>

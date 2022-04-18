@@ -153,7 +153,7 @@ const SignUp = () => {
                     {customError?.firebaseError && <p className='text-danger fw-bold'>{customError?.firebaseError}</p>}
 
                     <div className="w-50 mx-auto">
-                        <Button className='w-100' variant="primary" type="submit">
+                        <Button className='w-100 fw-bold' variant="outline-primary" type="submit">
                             Register
                         </Button>
                     </div>

@@ -138,7 +138,7 @@ const Login = () => {
                         </Link>
                     </h6>
                     <div className="w-50 mx-auto mt-5">
-                        <Button className='w-100' variant="primary" type="submit">
+                        <Button className='w-100 fw-bold' variant="outline-primary" type="submit">
                             Login
                         </Button>
                     </div>
