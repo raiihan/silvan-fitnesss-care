@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../Assets/Logo/logo.png';
 import auth from '../../../Firebase/Firebase.init';
 
@@ -20,18 +20,52 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className='ms-auto'>
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About Me</Nav.Link>
+                        <Nav.Link as={NavLink}
+                            to="/"
+                            style={({ isActive }) => {
+                                return isActive
+                                    ? { color: "white", fontWeight: '800' }
+                                    : {}
+                            }}
+                        >Home</Nav.Link>
+                        <Nav.Link as={NavLink}
+                            to="/blog"
+                            style={({ isActive }) => {
+                                return isActive
+                                    ? { color: "white", fontWeight: '800' }
+                                    : {}
+                            }}
+                        >Blog</Nav.Link>
+                        <Nav.Link as={NavLink}
+                            to="/about"
+                            style={({ isActive }) => {
+                                return isActive
+                                    ? { color: "white", fontWeight: '800' }
+                                    : {}
+                            }}
+                        >About Me</Nav.Link>
 
                         {user?.uid
                             ?
-                            <Nav.Link as={Link} to="/login"
+                            <Nav.Link as={NavLink}
+                                to="/login"
                                 onClick={() => signOut(auth)}
+                                style={({ isActive }) => {
+                                    return isActive
+                                        ? { color: "white", fontWeight: '800' }
+                                        : {}
+                                }}
                             >Sign Out
                             </Nav.Link>
                             :
-                            <Nav.Link eventKey={2} as={Link} to="/login">
+                            <Nav.Link as={NavLink}
+                                to="/login"
+                                style={({ isActive }) => {
+                                    return isActive
+                                        ? { color: "white", fontWeight: '800' }
+                                        : {}
+                                }}
+                            >
                                 Login
                             </Nav.Link>}
                     </Nav>
