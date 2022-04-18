@@ -5,9 +5,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../Assets/Logo/logo.png';
 import auth from '../../../Firebase/Firebase.init';
+import Loading from '../Loading/Loading';
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
+
+    if (loading) {
+        return <Loading />
+    }
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky="top">

@@ -1,7 +1,12 @@
 import { Button } from 'react-bootstrap';
 import { FaFacebook, FaGoogle, FaTwitter, FaGithub } from 'react-icons/fa';
 import React from 'react';
-import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle, useSignInWithTwitter } from 'react-firebase-hooks/auth';
+import {
+    useSignInWithFacebook,
+    useSignInWithGithub,
+    useSignInWithGoogle,
+    useSignInWithTwitter
+} from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase/Firebase.init';
 import Loading from '../../SharedPages/Loading/Loading';
 import { useLocation, useNavigate } from 'react-router-dom';
